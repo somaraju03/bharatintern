@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0514075922.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <nav id="desktop-nav"> 
+        <div class="logo"><h1>SHREYA</h1></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href='#header'>Home</a></li>
+                <li><a href='#about'>About</a></li>
+                <li><a href='#skills'>Skills</a></li>
+                <li><a href='#projects'>Projects</a></li>
+                <li><a href='#resume'>Resume</a></li>
+                <li><a href='#contact'>Contact</a></li>
+            </ul>
+    </div>
+</nav>
+<div class="header-text">
+    <h1>Hello, I'm <span>Shreya</span><br></h1>
+     
+    <div id="resume">
+    <a href="shreya resume.pdf"  download class="btn btn2">Download Resume</a>
+</div>
+</div>
+<!------------about----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col1">
+                <img src="user1.jpeg" alt="profile.jpg">
+                </div>
+                <div class="about-col2">
+                   <h1 class="sub-title">About me</h1>
+                   <p>Hi! I'm S Shreya
+                    Eager and driven 3rd year Computer Science Engineering student passionate about exploring the vast realms of technology and its applications. Currently pursuing a Bachelor's degree in Computer Science Engineering.
+                    I am passionate about continuous learning and strive to stay abreast of emerging trends and technologies. Enthusiastic about gaining hands-on experience through internships, projects, and collaborative opportunities. Keen on leveraging emerging technologies to address real-world challenges and contribute to meaningful innovations.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links " onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>C</li>
+                        <li>python</li>
+                        <li>java</li>
+                        <li>Html</li>
+                        <li>Sql</li>
+                </div>
+                <div class="tab-contents " id="education">
+                    <ul>
+                        <li><span>2025</span><br>GITAM, B.Tech, HYDERABAD</li>
+                            <li><span>2021</span><br>Narayana College, Intermediate,HYDERABAD</li>
+                            <li><span>2019</span><br>DAV Public School, HYDERABAD</li> 
+                        </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------projects----------- -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">PROJECTS</h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="police.png" >
+                        <div class="layer">
+                            <h3>Police Management System</h3>
+                        <p>: A Police Management System(PMS) is software built to handle the primary functions of
+                            a police department. PMS helps police officers to keep track of all the employees and the FIRs .It is used
+                            to manage the department using a computerized system.</p>
+                            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                           
+                        </div>
+                </div>
+                <div class="project">
+                    <img src="atm.jpg" >
+                        <div class="layer">
+                            <h3>ATM- Object Oriented Language based Project</h3>
+                            <p>Developed an Object-Oriented Language based project focused on an ATM system.
+                                        Utilized principles of object-oriented programming to design and implement a user-friendly interface.</p>
+                            <a href="#"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                </div>
+                <div class="project">
+                    <img src="encr decr.jpg" >
+                        <div class="layer">
+                            <h3>ATM</h3>
+                            <h3>TEXT ENCRYPTION AND DECRYPTION IN A FILE</h3>
+                          <p>Encryption is the process by which a readable message
+                              is converted to an unreadable form to prevent unauthorized parties from reading it. Decryption is the
+                              process of converting an encrypted message back to its original (readable) format. </p>
+                            <a href="#" target="_blank"> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+             </div> 
+        </div>
+</div>
+<!-- -----------------------contact ---------------------------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title1">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> shreyasomaraju@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91 8897158484</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/shreya-somaraju-221371247/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/somaraju03" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button typ="submit" class="btn btn2">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2024 <span>Shreya</span> All rights reserved. </p>
+    </div>
+</div>
+
+
+
+<script>
+    
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+
+</body>
+</html>
